@@ -8,7 +8,7 @@ interface Props {
 
 const GameCard: FC<Props> = ({ game }) => {
   return (
-    <li className="flex  rounded overflow-hidden shadow-custom-light dark:shadow-custom-dark p-4 border-color-border bg-card">
+    <li className="flex flex-col md:flex-row rounded overflow-hidden shadow-custom-light dark:shadow-custom-dark p-4 border-color-border bg-card">
       <Image
         style={{ maxWidth: "340px" }}
         alt={`${game.name} header`}

@@ -38,6 +38,18 @@ h1 {
   }
 }
 
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
 .mainnav {
   padding: 1rem;
   font-size: 1rem;
