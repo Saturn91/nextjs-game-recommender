@@ -23,7 +23,7 @@ export default function RootLayout({
         <Container>
           <Banner />
         </Container>
-        <Container className="h-full px-4 py-4">{children}</Container>
+        <Container className="flex-grow px-4 py-4">{children}</Container>
         <Footer />
       </body>
     </html>
