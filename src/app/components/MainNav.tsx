@@ -10,6 +10,10 @@ const mainNavLinks = [
     label: "Home",
   },
   {
+    href: "/steam-top-100",
+    label: "Steam",
+  },
+  {
     href: "/create-entry",
     label: "Add game",
   },
