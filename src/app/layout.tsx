@@ -4,7 +4,7 @@ import Container from "./components/Container";
 import { inter, roboto } from "./styles/fonts";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
-
+import MainNav from "./components/MainNav";
 export const metadata: Metadata = {
   title: "Recommened Games",
   description: "A simple test project by Saturn91",
@@ -23,6 +23,7 @@ export default function RootLayout({
         <Container>
           <Banner />
         </Container>
+        <MainNav />
         <Container className="flex-grow px-4 py-4">{children}</Container>
         <Footer />
       </body>

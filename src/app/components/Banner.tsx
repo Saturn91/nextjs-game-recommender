@@ -4,7 +4,7 @@ import banner from "@/app/assets/banner.jpg";
 import { pixelify_sans } from "@/app/styles/fonts";
 
 const Banner: FC = () => (
-  <div className="relative w-full h-[171px]">
+  <header className="relative w-full h-[171px]">
     <Image
       className={`w-full h-[171px] object-cover object-center`}
       src={banner}
@@ -16,7 +16,7 @@ const Banner: FC = () => (
         Recommended Games
       </h1>
     </div>
-  </div>
+  </header>
 );
 
 export default Banner;

@@ -11,7 +11,7 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        neongreen: "#AAFF99",
+        neongreen: "var(--neongreen)",
         container: "var(--container)",
       },
     },
