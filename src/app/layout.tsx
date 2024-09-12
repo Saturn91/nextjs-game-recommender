@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./styles/globals.css";
 import Container from "@/app/components/Container";
 import { inter, roboto } from "@/app/styles/fonts";
+import Banner from "./components/Banner";
 
 export const metadata: Metadata = {
   title: "Recommened Games",
@@ -16,7 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.className} ${inter.className} antialiased`}>
-        <Container>{children}</Container>
+        <Container>
+          <Banner />
+          {children}
+        </Container>
       </body>
     </html>
   );
