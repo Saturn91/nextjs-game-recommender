@@ -18,7 +18,13 @@ const GameList: FC<Props> = async ({ games = [], fetchGames }) => {
     }
   }, []);
 
-  return list.map((game, i) => <GameCard key={`game-${i}`} game={game} />);
+  return (
+    <ul className="flex flex-col gap-16 items-center justify-center">
+      {list.map((game, i) => (
+        <GameCard key={`game-${i}`} game={game} />
+      ))}
+    </ul>
+  );
 };
 
 export default GameList;

@@ -3,4 +3,5 @@ export type Game = {
   developer: string;
   publisher: string;
   averagePlayersLast2Weeks?: number;
+  steamID?: number;
 };

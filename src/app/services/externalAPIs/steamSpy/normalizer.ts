@@ -7,5 +7,6 @@ export const normailzeSteamGame = (game: SteamAPIGame): Game => {
     developer: game.developer,
     publisher: game.publisher,
     averagePlayersLast2Weeks: game.average_2weeks,
+    steamID: game.appid,
   };
 };
