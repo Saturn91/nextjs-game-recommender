@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import Container from "@/components/Container";
+import "./styles/globals.css";
+import Container from "@/app/components/Container";
+import { inter, roboto } from "@/app/styles/fonts";
 
 export const metadata: Metadata = {
   title: "Recommened Games",
@@ -14,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={"antialiased"}>
+      <body className={`${roboto.className} ${inter.className} antialiased`}>
         <Container>{children}</Container>
       </body>
     </html>
