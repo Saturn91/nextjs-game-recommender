@@ -18,11 +18,11 @@ const GameCard: FC<Props> = ({ game }) => {
         height={100}
         layout="responsive"
       />
-      <div className="px-8">
+      <div className="px-8" style={{ maxWidth: "340px" }}>
         <div className="mb-4">
-          <h2 className="text-xl font-bold mb-2">{game.name}</h2>
-          <p>Developer: {game.developer}</p>
-          <p>Publisher: {game.publisher}</p>
+          <h2 className="text-xl font-bold mb-2 truncate">{game.name}</h2>
+          <p className="truncate">Developer: {game.developer}</p>
+          <p className="truncate">Publisher: {game.publisher}</p>
         </div>
         <div className="pt-4 border-t border-color-border">
           <p>
