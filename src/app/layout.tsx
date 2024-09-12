@@ -3,6 +3,7 @@ import "./styles/globals.css";
 import Container from "./components/Container";
 import { inter, roboto } from "./styles/fonts";
 import Banner from "./components/Banner";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Recommened Games",
@@ -23,6 +24,7 @@ export default function RootLayout({
           <Banner />
         </Container>
         <Container className="h-full px-4 py-4">{children}</Container>
+        <Footer />
       </body>
     </html>
   );
