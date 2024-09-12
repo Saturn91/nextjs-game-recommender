@@ -1,4 +1,4 @@
-export type SteamSpyGame = {
+export type SteamAPIGame = {
   appid: number;
   name: string;
   developer: string;
