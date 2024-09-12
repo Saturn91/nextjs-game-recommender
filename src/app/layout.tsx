@@ -16,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} ${inter.className} antialiased`}>
+      <body
+        className={`${roboto.className} ${inter.className} antialiased h-screen flex flex-col`}
+      >
         <Container>
           <Banner />
         </Container>
