@@ -1,7 +1,15 @@
 import { FC, PropsWithChildren } from "react";
 
-const Container: FC<PropsWithChildren> = ({ children }) => {
-  return <div className="container mx-auto px-4">{children}</div>;
+interface Props {
+  className?: string;
+}
+
+const Container: FC<PropsWithChildren<Props>> = ({ children, className }) => {
+  return (
+    <div className={`${className} container mx-auto bg-container`}>
+      {children}
+    </div>
+  );
 };
 
 export default Container;

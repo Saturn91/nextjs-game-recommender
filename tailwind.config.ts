@@ -12,6 +12,7 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         neongreen: "#AAFF99",
+        container: "var(--container)",
       },
     },
   },

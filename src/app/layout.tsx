@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./styles/globals.css";
-import Container from "@/app/components/Container";
-import { inter, roboto } from "@/app/styles/fonts";
+import Container from "./components/Container";
+import { inter, roboto } from "./styles/fonts";
 import Banner from "./components/Banner";
 
 export const metadata: Metadata = {
@@ -19,8 +19,8 @@ export default function RootLayout({
       <body className={`${roboto.className} ${inter.className} antialiased`}>
         <Container>
           <Banner />
-          {children}
         </Container>
+        <Container className="h-full px-4 py-4">{children}</Container>
       </body>
     </html>
   );
