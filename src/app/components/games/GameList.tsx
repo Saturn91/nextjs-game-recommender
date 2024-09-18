@@ -1,6 +1,4 @@
-"use client";
-
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 import { Game } from "../types";
 import GameCard from "./GameCard";
 import { normailzeSteamGames } from "@/app/services/externalAPIs/steamSpy/normalizer";
@@ -11,19 +9,13 @@ interface Props {
 }
 
 const GameList: FC<Props> = async ({ games = [], fetchGamesEndpoint }) => {
-  const [list, setList] = useState(games);
+  const fetchGames = async () => {
+    const response = await fetch(fetchGamesEndpoint || "");
+    const data = await response.json();
+    return normailzeSteamGames(data);
+  };
 
-  useEffect(() => {
-    if (!fetchGamesEndpoint) return;
-
-    const fetchGames = async () => {
-      const response = await fetch(fetchGamesEndpoint);
-      const data = await response.json();
-      setList(normailzeSteamGames(data));
-    };
-
-    fetchGames();
-  }, []);
+  const list = await fetchGames();
 
   return (
     <ul className="flex flex-col gap-16 items-center justify-center">
